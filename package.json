@@ -1,17 +1,18 @@
 {
     "name": "openapi-zod-client-monorepo",
     "private": true,
-    "version": "1.4.19",
+    "version": "1.4.18",
     "repository": {
         "type": "git",
-        "url": "https://github.com/astahmer/openapi-zod-client.git"
+        "url": "https://github.com/cumhuronat/openapi-zod-client.git"
     },
     "preconstruct": {
         "packages": [
             "lib"
-        ]
+        ],
+        "distFilenameStrategy": "unscoped-package-name"
     },
-    "author": "Alexandre Stahmer <alexandre.stahmer@gmail.com>",
+    "author": "Cumhur Onat <cumhuronat@gmail.com> (Original author: Alexandre Stahmer <alexandre.stahmer@gmail.com>)",
     "engines": {
         "node": ">=18.16.0"
     },

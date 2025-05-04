@@ -398,6 +398,7 @@ const getZodChainableStringValidations = (schema: SchemaObject) => {
             .with("hostname", () => "url()")
             .with("uri", () => "url()")
             .with("uuid", () => "uuid()")
+            .with("date", () => "date()")
             .with("date-time", () => "datetime({ offset: true })")
             .otherwise(() => "");
 
