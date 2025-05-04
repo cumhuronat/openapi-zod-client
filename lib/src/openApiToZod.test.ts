@@ -52,6 +52,10 @@ test("getSchemaAsZodString", () => {
     ).toMatchInlineSnapshot('"z.object({ dt: z.string().datetime({ offset: true }) }).partial().passthrough()"');
 
     expect(
+        getSchemaAsZodString({ type: "object", properties: { dt: { type: "string", format: "date" } } })
+    ).toMatchInlineSnapshot('"z.object({ dt: z.string().date() }).partial().passthrough()"');
+
+    expect(
         getSchemaAsZodString({
             type: "object",
             properties: {
